@@ -740,7 +740,7 @@
       .replace(/\s+/g, ' ')
       .trim();
 
-  const INVITADAS = { edita: 'Edita', gabriela: 'Gabriela', invitada: 'Invitada' };
+  const INVITADAS = { edita: 'Edita', milagros: 'Milagros', gabriela: 'Gabriela', invitada: 'Invitada' };
   const BURLAS = [
     'Mmm... si fueras mi amiga de verdad, esta flor ya estaría floreciendo para ti.',
     'Qué lástima: esta sorpresa es exclusiva y tu nombre no está en la lista. Ni con cara de pena.',
