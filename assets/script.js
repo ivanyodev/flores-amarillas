@@ -528,7 +528,7 @@
     // 4) aparece el nombre
     tl.to('#name .outro__char', { opacity: 1, yPercent: 0, filter: 'blur(0px)', duration: 1.2, ease: 'power3.out', stagger: 0.08 }, 6.4);
     tl.to('#line', { scaleX: 1, duration: 1.4, ease: 'power2.inOut' }, 7.6);
-    const cap = 'flor.florecer();  // listo';
+    const cap = 'Gracias por Todo';
     const o = { n: 0 };
     tl.to(
       o,
