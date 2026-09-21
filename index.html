@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#040d12">
+
+<!-- SEO Básico -->
+<title>Flores Amarillas | Regala una sorpresa floral interactiva</title>
+<meta name="description" content="Descubre la tradición de regalar flores amarillas y sorpréndete con una experiencia interactiva en 3D dedicada a esa persona especial.">
+<meta name="keywords" content="flores amarillas, regalar flores, sorpresa 3D, tradición flores amarillas, detalle especial">
+<link rel="canonical" href="https://tu-sitio-web.com/">
+
+<!-- Open Graph / Redes Sociales (Facebook, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tu-sitio-web.com/">
+<meta property="og:title" content="Flores Amarillas | Regala una sorpresa floral interactiva">
+<meta property="og:description" content="Descubre la tradición de regalar flores amarillas y sorpréndete con una experiencia interactiva en 3D.">
+<meta property="og:image" content="https://tu-sitio-web.com/imagen-previa.jpg">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://tu-sitio-web.com/">
+<meta name="twitter:title" content="Flores Amarillas | Regala una sorpresa floral interactiva">
+<meta name="twitter:description" content="Descubre la tradición de regalar flores amarillas y sorpréndete con una experiencia interactiva en 3D.">
+<meta name="twitter:image" content="https://tu-sitio-web.com/imagen-previa.jpg">
+
+<!-- Fuentes y Estilos -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<canvas id="scene" class="scene" aria-label="Flor amarilla en 3D. Arrastra para girarla."></canvas>
+<div id="fade" class="fade"></div>
+
+<!-- ============ BIENVENIDA ============ -->
+<main id="welcome" class="welcome" inert>
+  <div class="welcome__stack" id="stack">
+    <p class="welcome__comment">// tradición: regalar una flor amarilla para desear buena suerte</p>
+    <h1 class="welcome__title">Flores amarillas</h1>
+    <p class="welcome__lede">Si sientes que eres una persona muy especial para mí, escribe tu nombre. Si no, escribe <em>invitada</em> y esta flor también florecerá para ti.</p>
+
+    <div class="field" id="field">
+      <label class="sr-only" for="nombre">Tu nombre</label>
+      <input id="nombre" class="field__input" type="text" maxlength="24" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Tu nombre">
+    </div>
+    <p class="snippet" aria-hidden="true">
+      <span class="snippet__keyword">const</span> flor = <span class="snippet__keyword">new</span> <span class="snippet__class">FlorAmarilla</span>(<span class="snippet__string" id="live">"…"</span>);
+    </p>
+    <p class="welcome__error" id="err" role="alert" aria-live="polite"></p>
+
+    <div class="cta-wrap" id="ctaWrap">
+      <button class="cta" id="go" type="button">Ver sorpresa</button>
+    </div>
+  </div>
+</main>
+
+<!-- ============ ESCENA ============ -->
+<div id="hint" class="hint">arrastra para girar la flor, toca para soltar polen</div>
+<section id="outro" class="outro">
+  <h2 id="name" class="outro__name"></h2>
+  <div id="line" class="outro__line"></div>
+  <p id="caption" class="outro__caption" aria-hidden="true"><span id="cap-text"></span><i class="outro__cursor"></i></p>
+</section>
+<div id="gate" class="gate">
+  <button class="cta" id="enter" type="button">Abrir regalo</button>
+  <p class="gate__text">Con música se disfruta más. Sube un poco el volumen.</p>
+</div>
+<div id="nogl" class="nogl">Tu navegador no puede mostrar gráficos 3D (WebGL). Prueba con otro navegador.</div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>
